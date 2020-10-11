@@ -23,7 +23,10 @@ dotenv.config();
 const baseUrl = "https://api.meaningcloud.com/sentiment-2.1?key="
 const textJSON = "&of=json&txt="
 const API_KEY = process.env.API_Key;
+const lang = "&lang=auto"
+const userInput = "&url="
 console.log(`API Key: ${API_KEY}`);
+
 
 app.get("/", (req, res) => {
     res.sendFile("dist/index.html");
@@ -34,7 +37,7 @@ app.get('/test', function (req, res) {
 });
 
 app.post("/article", async (req, res) => {
-    const response = await fetch(`${baseUrl}${textJSON}${API_KEY}${req.body}`);
+    const response = await fetch(`${baseUrl}${API_KEY}${lang}${userInput}${req.body}`);
 
     try {
         sentimentData = await response.json();
