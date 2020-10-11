@@ -38,7 +38,7 @@ app.get('/test', function (req, res) {
 
 app.post("/article", async (req, res) => {
     const response = await fetch(`${baseUrl}${API_KEY}${lang}${userInput}${req.body}`);
-
+    console.log(response);
     try {
         sentimentData = await response.json();
         res.send(sentimentData);
@@ -52,4 +52,6 @@ app.listen(8080, function () {
     console.log("Example app listening on port 8080! Go to http://localhost:8080")
 })
 
-
+app.use(function (req, res, next) {
+    res.status(404).send("Sorry can't find that!")
+  })
