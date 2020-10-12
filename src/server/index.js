@@ -37,10 +37,10 @@ app.get('/test', function (req, res) {
 });
 
 app.post("/article", async (req, res) => {
-    const response = await fetch(`${baseUrl}${API_KEY}${lang}${userInput}${req.body}`);
+    const response = await fetch(`${baseUrl}${API_KEY}${textJSON}${req.body}`);
     console.log(response);
     try {
-        sentimentData = await response.json();
+        const sentimentData = await response.json();
         res.send(sentimentData);
     } catch (error){
         console.log("error: ", error);
