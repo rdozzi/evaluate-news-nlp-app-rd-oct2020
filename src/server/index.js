@@ -17,10 +17,10 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 //Define API Call Variables
-const baseUrl = "https://api.meaningcloud.com/sentiment-2.1?key="
-const textJSON = "&of=json&txt="
+const baseUrl = "https://api.meaningcloud.com/sentiment-2.1?key=";
 const API_KEY = process.env.API_KEY;
-const langAndUrlInput = "&lang=auto&url="
+const langAndText = "&lang=en&txt="
+const model = "&model=general"
 
 console.log(`API Key: ${API_KEY}`);
 
@@ -30,8 +30,9 @@ app.get("/", (req, res) => {
 });
 
 app.post("/article", async (req, res) => {
-    const resp = await fetch(`${baseUrl}${API_KEY}${langAndUrlInput}${req.body}`);
-    console.log(resp);
+    let text=req.query.txt;
+    const response = await fetch(`${baseUrl}${API_KEY}${langAndText}${text}${model}`);
+    console.log(response);
     try {
         const data = await response.json();
         res.send(data);

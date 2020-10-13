@@ -6,6 +6,12 @@ function handleSubmit(event) {
     console.log("::: Form Submitted :::");
     fetch('http://localhost:8080/article', {
         method: "POST",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+            "Content-Type": "text/plain"
+        },
+        // body: JSON.stringify({url: data})
     })
     .then(res => res.json())
     .then((res) => {
