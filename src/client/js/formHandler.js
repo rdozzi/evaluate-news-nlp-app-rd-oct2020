@@ -16,10 +16,10 @@ function handleSubmit(event) {
     .then(res => res.json())
     .then((res) => {
         console.log(res);
-        document.getElementById("#score").innerHTML = `Polarity: ${res.score_tag}`;
-        document.getElementById("#subjectivity").innerHTML = `Subjectivity: ${res.subjectivity}`;
-        document.getElementById("#confidence").innerHTML = `Confidence: ${res.confidence}`;
-        document.getElementById("#irony").innerHTML = `Irony: ${res.irony}`;
+        document.getElementById("score").innerHTML = `Polarity: ${res.score_tag}`;
+        document.getElementById("subjectivity").innerHTML = `Subjectivity: ${res.subjectivity}`;
+        document.getElementById("confidence").innerHTML = `Confidence: ${res.confidence}`;
+        document.getElementById("irony").innerHTML = `Irony: ${res.irony}`;
     })
 }
 
