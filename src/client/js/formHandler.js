@@ -40,4 +40,4 @@ function scoreConverter(score_tag) {
     }
 }
 
-export { handleSubmit }
+export { handleSubmit, scoreConverter }
