@@ -5,9 +5,10 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     let userInput = document.getElementById('url').value;
+    console.log("::: Form Submitted :::");
 
     if(urlFormatCheck(userInput)){
-        console.log("::: Form Submitted :::");
+
         fetch('http://localhost:8080/article', {
             method: "POST",
             cache: "no-cache",

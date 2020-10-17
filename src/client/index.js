@@ -7,6 +7,6 @@ import './styles/header.scss'
 import './styles/main.scss'
 
 export{
-    urlFormatChecker,
+    urlFormatCheck,
     handleSubmit
 }
