@@ -53,8 +53,10 @@ function scoreConverter(score_tag) {
         return "Negative";
     } else if (score_tag === "N+"){
         return "Strongly Negative";
-    } else{
+    } else if (score_tag === "NONE"){
         return "Without Sentiment";
+    } else {
+        return "Invalid";
     }
 }
 
