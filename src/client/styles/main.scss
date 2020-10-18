@@ -4,20 +4,20 @@ main {
     margin-right: auto;
     width: 75vw;
     text-align: center;
+
+    form {
+            display: inline-block;
+            width: 75%;
+        }
 }
 
-main form{
-    display: inline-block;
-    width: 75%;
+form {
+    #url {
+            width: 100%;
+            font-size: large;
+    }
 
+    #submit {
+            margin-top: 15px;
+        }
 }
-
-form #url {
-    width: 100%;
-    font-size: large;
-}
-
-form #submit {
-    margin-top: 15px;
-}
-
