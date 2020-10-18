@@ -38,6 +38,7 @@ function handleSubmit(event) {
         })
     } else{
         console.log("Bad URL")
+        alert('Bad URL Input. URL prefix must be "http://" or "https://" with no spaces.')
     }
 }
 
