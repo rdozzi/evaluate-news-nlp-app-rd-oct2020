@@ -21,11 +21,20 @@ function handleSubmit(event) {
         .then(res => res.json())
         .then((res) => {
             console.log(res);
+            document.getElementById("formResults").innerHTML = "Form Results:";
+            document.getElementById("formResults").style.fontSize = "x-large";
+
             document.getElementById("score").innerHTML = `Polarity: ${scoreConverter(res.score_tag).toUpperCase()}`;
             document.getElementById("subjectivity").innerHTML = `Subjectivity: ${res.subjectivity}`;
             document.getElementById("agreement").innerHTML = `Agreement: ${res.agreement}`
             document.getElementById("confidence").innerHTML = `Confidence: ${res.confidence}`;
             document.getElementById("irony").innerHTML = `Irony: ${res.irony}`;
+
+            let formResponse = document.getElementsByClassName("formResponse");
+            for (let item of formResponse){
+                item.style.fontWeight = "bold";
+            }
+
         })
     } else{
         console.log("Bad URL")
