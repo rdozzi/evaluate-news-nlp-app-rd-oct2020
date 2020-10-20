@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project introduces students of the Udacity's Front End Web Developmer Nanodegree program to Webpack module bundler used for asset management and webpage optimization. Using webpack loaders and plugins along with Node Express, the student will use Meaningcloud's natural language processing (NLP) capabilities to rate a website's content after making a call to Meaningcloud's API.
+This project introduces students of Udacity's Front End Web Developer Nanodegree program to the Webpack module bundler used for asset management and webpage resource optimization. Using webpack loaders and plugins along with Node Express, the student will use Meaningcloud's Natural Language Processing (NLP) capabilities to rate a website's content after making a call to Meaningcloud's API.
 
 From Udacity's project description, NLPs leverage machine learning and deep learning to create a program that can interpret natural human speech. Systems like Alexa, Google Assistant, and many voice interaction programs are well known to us, but understanding human speech is an incredibly difficult task and requires a lot of resources to achieve. From Wikipedia (Oct 2020):
 
@@ -29,31 +29,31 @@ Go to Meaningcloud's website and follow the instructions to set up an account an
 
 ### Install *dotenv* dependency and create a *.env* folder
 
-Personal API keys like passwords and other information are both sensitive and confidential and ***should not*** be visible to the public. To maintain anonymity and accessibility of your personal API key, go to the *root* directory of your project and create a *.env* folder.
+Personal API keys like passwords and other sensitive information are confidential and ***should not*** be visible to the public. To maintain anonymity and accessibility of your personal API key, go to the *root* directory of your project and create a *.env* folder.
 
 >mkdir *.env*
 
-Within your Integrated Development Environment (IDE), go into the *package.json* file and look for *dotenv* in your list of dependencies. If it not present, go back to your terminal and install the *dotenv* dependency as follows:
+Within your Integrated Development Environment (IDE), go into the *package.json* file and look for *dotenv* in your list of dependencies. If it is not present, go back to your terminal and install the *dotenv* dependency as follows:
 
 >npm install dotenv
 
-Within the .env file, create a variable **"API_KEY="** and add the API key from MeaningCloud below.
+Within the .env file, create a variable **"API_KEY="** and add the API key from MeaningCloud as shown below.
 
 >API_KEY=123456789ABCDEFGHI
 
 ### Running the Program
 
-This program comes with <em>Test</em>, <em>Development</em>, and <em>Production</em> modes. These <em>run</em> scripts are shown in the package.json document
+This program comes with *Test*, *Development*, and *Production* modes. These *run* scripts are shown in the package.json document.
 
 To run testing modules of the application, within terminal go to the working directory for this project and type:
 
 >npm run test
 
-To run the project in <em>Development</em> mode, type:
+To run the project in *Development* mode, type:
 
 >npm run build-dev (The page will launch automatically)
 
-To run the project in <em>Production</em> mode, type:
+To run the project in *Production* mode, type:
 
 >npm run build-prod (To create the distribution file)
 
